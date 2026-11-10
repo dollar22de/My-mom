@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#240b19">
+<title>إلى خالده ❤️ | من يوسف</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--pink:#ff8eae;--gold:#ffdb9b;--bg:#180813}
+body{
+ background:radial-gradient(ellipse at 50% 30%,#50182f,#240b19 55%,#100710);
+ color:white;font-family:'Cairo',sans-serif;
+ min-height:100vh;overflow-x:hidden;
+}
+#particles,.hearts{
+ position:fixed;inset:0;pointer-events:none;overflow:hidden;
+}
+#particles{z-index:0}
+.hearts{z-index:1}
+.container{
+ position:relative;z-index:2;
+ width:min(100% - 30px,520px);
+ margin:auto;padding:65px 0 45px;
+ text-align:center;
+}
+.topline{
+ color:#ffc4d6;letter-spacing:3px;
+ font-size:12px;margin-bottom:20px;
+}
+.rose{
+ font-size:75px;display:inline-block;
+ filter:drop-shadow(0 0 18px #ff668e);
+ animation:rose 3s ease-in-out infinite;
+}
+@keyframes rose{
+ 50%{transform:scale(1.13) rotate(8deg)}
+}
+h1{
+ font-size:clamp(36px,10vw,57px);
+ color:#ffcf9d;
+ text-shadow:0 0 12px #ff739d,0 0 35px #ff416f;
+ margin:8px 0;
+ animation:shine 3s infinite alternate;
+}
+@keyframes shine{
+ to{text-shadow:0 0 20px #fff0c4,0 0 45px #ff5e94}
+}
+.subtitle{color:#ffd9e4;font-size:15px}
+.line{
+ width:120px;height:2px;margin:22px auto;
+ background:linear-gradient(90deg,transparent,#ffd39d,transparent);
+}
+.card{
+ background:linear-gradient(145deg,#ffffff14,#ffffff05);
+ border:1px solid #ffb3c755;
+ border-radius:25px;
+ padding:28px 22px;
+ margin:25px 0;
+ backdrop-filter:blur(12px);
+ box-shadow:0 12px 50px #0005,0 0 25px #ff6d9820;
+}
+.card h2{color:#ffd39d;font-size:23px;margin-bottom:15px}
+.message{
+ font-family:'Amiri',serif;
+ font-size:23px;line-height:2;
+ color:#ffe4eb;
+}
+button{
+ background:linear-gradient(120deg,#ffd49a,#ff9ab8);
+ border:0;border-radius:50px;
+ padding:14px 27px;margin:12px 5px;
+ font-family:'Cairo',sans-serif;font-size:15px;
+ font-weight:900;color:#52152e;
+ cursor:pointer;box-shadow:0 0 24px #ff8eae55;
+ transition:.3s;
+}
+button:active{transform:scale(.94)}
+button:hover{transform:translateY(-3px)}
+.hidden{display:none!important}
+.reveal{animation:reveal 1s ease both}
+@keyframes reveal{
+ from{opacity:0;transform:translateY(35px) scale(.95)}
+ to{opacity:1;transform:translateY(0) scale(1)}
+}
+.flower{font-size:40px;display:inline-block;animation:swing 2s infinite alternate}
+@keyframes swing{to{transform:rotate(18deg)}}
+.heart{
+ position:absolute;bottom:-40px;
+ animation:floatUp linear forwards;
+ opacity:.8;
+}
+@keyframes floatUp{
+ to{transform:translateY(-110vh) rotate(360deg);opacity:0}
+}
+.spark{
+ position:absolute;border-radius:50%;
+ background:#ffe4a9;
+ box-shadow:0 0 12px #ffb8d0;
+ animation:twinkle 3s infinite alternate;
+}
+@keyframes twinkle{to{opacity:.15;transform:scale(.3)}}
+.cake{font-size:68px;animation:bounce 1.5s infinite}
+@keyframes bounce{
+ 50%{transform:translateY(-13px) rotate(-4deg)}
+}
+.footer{color:#eab6c6;font-size:13px;margin-top:30px}
+#musicNote{font-size:12px;color:#ffc4d6}
+</style>
+</head>
+
+<body>
+<div id="particles"></div>
+<div class="hearts" id="hearts"></div>
+
+<main class="container">
+
+<div class="topline">✦ هدية صغيرة من قلب كبير ✦</div>
+
+<div class="rose">🌹</div>
+<h1>خالده</h1>
+<div class="subtitle">إلى أجمل أم بالدنيا ❤️</div>
+<div class="line"></div>
+
+<section class="card">
+<h2>يمّه عندي إلچ كلام...</h2>
+<div class="message">
+أدري يمكن زعلتج مني،<br>
+بس والله ما كان قصدي أضايقج.<br>
+إنتِ أغلى من كلشي عندي،<br>
+ورضاچ عندي يسوى الدنيا كلها.
+<br><br>
+سامحيني يا أجمل نعمة بحياتي 🥺
+</div>
+<button onclick="showLove()">اضغطي هنا يا أمي ❤️</button>
+</section>
+
+<section id="love" class="hidden">
+<div class="card reveal">
+<div class="flower">🌷</div>
+<h2>تعرفين شنو؟</h2>
+<div class="message">
+لو يخلّوني أختار أمي من بين كل أمهات العالم،
+راح أختارچ إنتِ ألف مرة.
+<br><br>
+أحبچ يا خالده، وأتمنى أشوف ضحكتچ دائماً.
+</div>
+<div style="font-size:35px;margin-top:15px">❤️🌹❤️</div>
+<button onclick="showSecret()">باقي مفاجأة أخيرة 🎁</button>
+</div>
+</section>
+
+<section id="secret" class="hidden">
+<div class="card reveal">
+<div class="cake">🎂</div>
+<h2>أمي الغالية خالده</h2>
+<div class="message">
+إنتِ الملكة، وإحنا كلنا بخدمتچ 👑
+<br>
+بس عندي طلب صغير...
+</div>
+<div style="font-size:28px;margin:15px">🥛 🍰</div>
+<h1 style="font-size:29px">كومي سويلنه ككو وحليب 🗿😂</h1>
+<div class="message">
+بس إذا ما تريدين، آني أسويلچ
+<br>
+المهم لا تبقين زعلانة مني ❤️
+</div>
+<div class="line"></div>
+<div class="message" style="color:#ffcf9d">
+أحبچ هواية يمّه
+</div>
+<h2 style="margin-top:12px">ابنج يوسف ❤️</h2>
+<button onclick="celebrate()">اضغطي حتى تمطر ورود 🌹</button>
+</div>
+</section>
+
+<div class="footer">
+صُنعت بكل الحب من يوسف إلى خالده ❤️
+<br>إنتِ أجمل نعمة بالدنيا
+</div>
+</main>
+
+<script>
+const hearts=document.getElementById('hearts');
+const particles=document.getElementById('particles');
+
+function floatHeart(){
+ const h=document.createElement('span');
+ h.className='heart';
+ h.textContent=['❤️','💕','💗','💖','🌸'][Math.floor(Math.random()*5)];
+ h.style.left=Math.random()*100+'%';
+ h.style.fontSize=(15+Math.random()*24)+'px';
+ h.style.animationDuration=(5+Math.random()*6)+'s';
+ hearts.appendChild(h);
+ setTimeout(()=>h.remove(),11000);
+}
+setInterval(floatHeart,450);
+
+for(let i=0;i<35;i++){
+ const s=document.createElement('span');
+ s.className='spark';
+ s.style.left=Math.random()*100+'%';
+ s.style.top=Math.random()*100+'%';
+ s.style.width=s.style.height=(2+Math.random()*4)+'px';
+ s.style.animationDelay=Math.random()*3+'s';
+ particles.appendChild(s);
+}
+
+function showLove(){
+ document.getElementById('love').classList.remove('hidden');
+ document.getElementById('love').scrollIntoView({behavior:'smooth'});
+}
+
+function showSecret(){
+ document.getElementById('secret').classList.remove('hidden');
+ document.getElementById('secret').scrollIntoView({behavior:'smooth'});
+}
+
+function celebrate(){
+ for(let i=0;i<65;i++){
+  setTimeout(floatHeart,i*35);
+ }
+}
+</script>
+</body>
+</html>
